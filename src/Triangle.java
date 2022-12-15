@@ -1,3 +1,5 @@
+import static java.lang.Math.sqrt;
+
 public class Triangle {
    Point Ver1;
    Point Ver2;
@@ -26,5 +28,10 @@ public class Triangle {
 
     public double getSumLength(){
         return (getLength1()+getLength2()+getLength3());
+    }
+
+    public double getTrianArea(){
+        double p=getSumLength()/2;
+        return sqrt(p*(p-getLength1())*(p-getLength2())*(p-getLength3()));
     }
 }
